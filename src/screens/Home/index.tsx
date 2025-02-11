@@ -8,6 +8,10 @@ export default function Home() {
     console.log('Você clicou no botão de add')
   }
 
+  function handleParticipantRemove(name: string) {
+    console.log(`Este usuário será removido: ${name}`)
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>Volta Redonda</Text>
@@ -24,8 +28,14 @@ export default function Home() {
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
       </View>
-      <Participant name="Hikaro Ribeiro" />
-      <Participant name="Bernardo Ribeiro" />
+      <Participant
+        name="Hikaro Ribeiro"
+        onRemove={() => handleParticipantRemove('Hikaro')}
+      />
+      <Participant
+        name="Bernardo Ribeiro"
+        onRemove={() => handleParticipantRemove('Bernardo')}
+      />
     </View>
   )
 }
