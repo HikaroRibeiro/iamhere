@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity, View } from 'react-native'
 import { styles } from './styles'
 
-interface Props {
+type Props = {
   name: string
   onRemove: () => void
 }
