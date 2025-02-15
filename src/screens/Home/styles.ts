@@ -49,4 +49,12 @@ export const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'white',
   },
+  listEmptyText: {
+    color: '#fff',
+    fontSize: 14,
+    textAlign: 'center',
+  },
+  flatList: {
+    width: '100%',
+  },
 })
