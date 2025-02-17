@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import {
   Alert,
   FlatList,
@@ -35,7 +36,10 @@ export default function Home() {
     Alert.alert('Remover', `Remover o participante ${name} ?`, [
       {
         text: 'Sim',
-        onPress: () => Alert.alert('Excluido'),
+        onPress: () =>
+          setParticipants((prevState) =>
+            prevState.filter((participante) => participante !== name),
+          ),
       },
       {
         text: 'Não',
